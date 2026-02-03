@@ -8,12 +8,55 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
+}
+
+.container {
     display: flex;
-    flex-wrap: wrap;
+    gap: 20px;
+    /* max-width: 1200px; */
+}
+
+/* LEFT COLUMN */
+.left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-/* Main user section */
+/* RIGHT COLUMN (FRIENDS) */
+.right-column {
+    flex: 1;
+    background-color: #2E8AB8;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+#friends {
+    background-color: transparent;
+}
+
+#friends h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.friend {
+    color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.friend p {
+    margin: 0;
+}
+
+.friend img {
+    display: none;
+}
+
+/* MAIN USER SECTION */
 #main-user {
     background-color: #2E8AB8;
     color: white;
@@ -22,68 +65,64 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 100%;
-    max-width: 500px;
 }
 
 #main-user img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 #main-user h1 {
     font-size: 24px;
-}
-
-#main-user p {
-    font-size: 14px;
-    margin: 5px 0 0 0;
-}
-
-/* Friends section */
-#friends {
-    background-color: #2E8AB8;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 200px;
-    flex: 1;
-}
-
-#friends h2 {
-    margin-bottom: 15px;
-}
-
-.friend {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.friend img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-    display: none;
-    /* Hide friend images to show just names */
-}
-
-.friend p {
     margin: 0;
 }
 
-/* Other sections */
-#quote,
-#pokemon,
-#about {
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    margin: 20px 0;
+#main-user p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
 }
 
-/* Button */
+/* QUOTE SECTION */
+#quote {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#quote-text {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* POKEMON SECTION */
+#pokemon {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#pokemon img {
+    width: 100px;
+    height: 100px;
+}
+
+/* ABOUT SECTION */
+#about {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#about h2 {
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
 #generate-btn {
     background-color: #2ECC71;
     color: white;
@@ -92,7 +131,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    align-self: flex-start;
 }
 
 #generate-btn:hover {

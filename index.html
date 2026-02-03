@@ -10,45 +10,57 @@
 </head>
 
 <body>
-    <section id="main-user">
-        <img id="main-user-pic" alt="User">
-        <div id="header-container">
-            <h1>name</h1>
-            <p id="city">city</p>
-            <p id="state">state</p>
+    <div class="container">
+
+        <!-- LEFT COLUMN -->
+        <div class="left-column">
+
+            <!-- MAIN USER -->
+            <section id="main-user">
+                <img id="main-user-pic" alt="User">
+                <div id="header-container">
+                    <h1>name</h1>
+                    <p id="city">city</p>
+                    <p id="state">state</p>
+                </div>
+            </section>
+
+            <!-- QUOTE -->
+            <section id="quote">
+                <p>Favorite quote:</p>
+                <p id="quote-text">Quote will go here</p>
+                <p id="quote-author">- kanye</p>
+            </section>
+
+            <!-- POKEMON -->
+            <section id="pokemon">
+                <img id="pokemon-image" alt="Pokemon">
+                <p id="pokemon-name">Pokemon Name</p>
+            </section>
+
+            <!-- ABOUT ME -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p id="about-text">Bacon ipsum text here</p>
+            </section>
+
+            <!-- BUTTON -->
+            <button id="generate-btn">Generate New User</button>
+
         </div>
-    </section>
 
-    <section id="friends">
-        <h2>Friends</h2>
-        <div id="friends-container">
-            <div class="friend">
-                <img src="friend-pic.jpg" alt="Friend">
-                <p>Friend Name</p>
-            </div>
+        <!-- RIGHT COLUMN (FRIENDS) -->
+        <div class="right-column">
+            <section id="friends">
+                <h2>Friends</h2>
+                <div id="friends-container">
+                </div>
+            </section>
         </div>
-    </section>
-    <section id="quote">
-        <p>Favorite quote:</p>
-        <p id="quote-text">Quote will go here</p>
-        <p id="quote-author">- kanye</p>
-    </section>
 
-    <section id="pokemon">
-        <img id="pokemon-image" alt="Pokemon">
-        <p id="pokemon-name">Pokemon Name</p>
-    </section>
-    <!-- ABOUT ME -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p id="about-text">Bacon ipsum text here</p>
-    </section>
-
-    <!-- BUTTON -->
-    <button id="generate-btn">Generate New User</button>
+    </div>
 
     <script src="main.js"></script>
-
 </body>
 
 </html>
