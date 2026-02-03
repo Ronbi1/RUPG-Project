@@ -5,6 +5,7 @@ class UserPage {
         this.friendsContainer = document.getElementById("friends-container");
         this.quoteText = document.getElementById("quote-text");
         this.pokemonImg = document.getElementById("pokemon-image");
+        this.pokemonName = document.getElementById("pokemon-name");
         this.aboutText = document.getElementById("about-text");
         this.genButton = document.getElementById("generate-btn")
 
@@ -17,6 +18,9 @@ class UserPage {
         console.log('Button clicked');
         this.fetchUsers();
         this.fetchQuote();
+        this.fetchPokemon();
+        this.fetchAbout();
+
     }
 
     fetchUsers() {
@@ -28,7 +32,7 @@ class UserPage {
                 this.mainUserSection.querySelector('h1').textContent = mainUser.name.first + ' ' + mainUser.name.last;
                 this.mainUserSection.querySelector('#city').textContent = mainUser.location.city;
                 this.mainUserSection.querySelector('#state').textContent = mainUser.location.country;
-
+                this.friendsContainer.innerHTML = '';
                 for (let i = 1; i < data.results.length; i++) {
                     const newFriend = document.createElement('div');
                     newFriend.className = 'friend';
@@ -64,6 +68,34 @@ class UserPage {
 
     }
 
+    fetchPokemon() {
+        let number = this.getRandomArbitrary(1, 1025);
+        fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
+            .then(response => response.json())
+            .then(data => {
+                this.pokemonImg.src = data.sprites.front_default
+                this.pokemonName.textContent = data.name
+            })
+            .catch(error => {
+                console.log("error", error);
+            })
+
+    }
+
+    getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    fetchAbout() {
+        fetch("https://baconipsum.com/api/?type=meat-and-filler")
+            .then(response => response.json())
+            .then(data => {
+                this.aboutText.textContent = data[0]
+            })
+            .catch(error => {
+                console.log("error", error);
+            })
+    }
 }
 
 const page = new UserPage()

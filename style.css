@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Main user section */
+#main-user {
+    background-color: #2E8AB8;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#main-user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#main-user h1 {
+    font-size: 24px;
+}
+
+#main-user p {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+/* Friends section */
+#friends {
+    background-color: #2E8AB8;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    flex: 1;
+}
+
+#friends h2 {
+    margin-bottom: 15px;
+}
+
+.friend {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.friend img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: none;
+    /* Hide friend images to show just names */
+}
+
+.friend p {
+    margin: 0;
+}
+
+/* Other sections */
+#quote,
+#pokemon,
+#about {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Button */
+#generate-btn {
+    background-color: #2ECC71;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#generate-btn:hover {
+    background-color: #27AE60;
+}
